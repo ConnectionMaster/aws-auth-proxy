@@ -17,4 +17,4 @@ RUN go install github.com/pocket/aws-auth-proxy
 
 ENTRYPOINT ["bin/entrypoint.sh"]
 
-CMD ["sh","-c","aws-auth-proxy","-access-key=$AWS_ACCESSKEY_ID","-secret-key=\"$AWS_SECRET_ACCESS_KEY\"","-service-name=$AWS_SERVICE_NAME","-region-name=$AWS_REGION","-upstream-host=$UPSTREAM_HOST","-upstream-scheme=$UPSTREAM_SCHEME","-listen-address=\":$LISTEN_PORT\""]
+CMD ["bin/default.sh"]
